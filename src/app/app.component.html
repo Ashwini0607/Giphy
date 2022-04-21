@@ -1,0 +1,17 @@
+<div style="background-color: black;padding-left: 20%;padding-right: 20%;padding-top:5%;">
+ <img src="assets/logo.png" height="40px"><br>
+  <input type="text" placeholder="@ username" class="in"   [(ngModel)]="serachValue">
+  <button class="btn"  (click)="search(serachValue)" >
+    search
+  </button>
+
+
+  <br>
+
+
+  <!-- show image here -->
+
+  <div class="grid-container">
+    <ng-container  *ngFor="let a of imageArray.data"><img class="grid-item" [src]="a.images.fixed_width.url"  ></ng-container>>
+  </div>
+</div>
